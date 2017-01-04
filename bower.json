@@ -1,0 +1,38 @@
+{
+    "name": "datatables.net-se",
+    "description": "DataTables for jQuery with styling for [Semantic UI](http://semantic-ui.com/)",
+    "main": [
+        "js/dataTables.semanticui.js",
+        "css/dataTables.semanticui.css"
+    ],
+    "keywords": [
+        "filter",
+        "sort",
+        "DataTables",
+        "jQuery",
+        "table",
+        "Semantic UI"
+    ],
+    "dependencies": {
+        "jquery": ">=1.7",
+        "datatables.net": ">=1.10.13"
+    },
+    "moduleType": [
+        "globals",
+        "amd",
+        "node"
+    ],
+    "ignore": [
+        "composer.json",
+        "datatables.json",
+        "package.json"
+    ],
+    "authors": [
+        {
+            "name": "SpryMedia Ltd",
+            "homepage": "https://datatables.net"
+        }
+    ],
+    "homepage": "https://datatables.net",
+    "license": "MIT"
+}
