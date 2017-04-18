@@ -1,6 +1,6 @@
 {
     "name": "datatables.net-se",
-    "version": "1.10.14",
+    "version": "1.10.15",
     "description": "DataTables for jQuery with styling for [Semantic UI](http://semantic-ui.com/)",
     "files": [
         "js/dataTables.semanticui.js",
