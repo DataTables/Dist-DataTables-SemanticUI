@@ -68,7 +68,7 @@ $.extend( DataTable.ext.classes, {
 	sWrapper:      "dataTables_wrapper dt-semanticUI",
 	sFilter:       "dataTables_filter ui input",
 	sProcessing:   "dataTables_processing ui segment",
-	sPageButton:   "paginate_button item"
+	sPageButton:   "item"
 } );
 
 
