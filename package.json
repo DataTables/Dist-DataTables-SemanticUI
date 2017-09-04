@@ -3,8 +3,8 @@
     "version": "1.10.16",
     "description": "DataTables for jQuery with styling for [Semantic UI](http://semantic-ui.com/)",
     "files": [
-        "js/dataTables.semanticui.js",
-        "css/dataTables.semanticui.css"
+        "css/**/*.css",
+        "js/**/*.js"
     ],
     "main": "./js/dataTables.semanticui.js",
     "keywords": [
