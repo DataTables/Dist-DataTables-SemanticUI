@@ -26,5 +26,9 @@
         "jquery": ">=1.7",
         "datatables.net": "1.10.16"
     },
-    "style": "css/dataTables.semanticui.css"
+    "style": "css/dataTables.semanticui.css",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DataTables/Dist-DataTables-SemanticUI.git"
+    }
 }
