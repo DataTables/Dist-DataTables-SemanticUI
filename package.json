@@ -6,7 +6,7 @@
         "css/**/*.css",
         "js/**/*.js"
     ],
-    "main": "./js/dataTables.semanticui.js",
+    "main": "js/dataTables.semanticui.js",
     "keywords": [
         "filter",
         "sort",
@@ -25,5 +25,6 @@
     "dependencies": {
         "jquery": ">=1.7",
         "datatables.net": "1.10.16"
-    }
+    },
+    "style": "css/dataTables.semanticui.css"
 }
