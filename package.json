@@ -1,6 +1,6 @@
 {
     "name": "datatables.net-se",
-    "version": "1.10.19",
+    "version": "1.10.20",
     "description": "DataTables for jQuery with styling for [Semantic UI](http://semantic-ui.com/)",
     "files": [
         "css/**/*.css",
@@ -24,7 +24,7 @@
     },
     "dependencies": {
         "jquery": ">=1.7",
-        "datatables.net": "1.10.19"
+        "datatables.net": "1.10.20"
     },
     "style": "css/dataTables.semanticui.css",
     "repository": {
