@@ -1,32 +1,45 @@
 {
     "name": "datatables.net-se",
+    "description": "DataTables for jQuery with styling for [SemanticUI](https://semantic-ui.com/)",
+    "main": "js/dataTables.semanticui.js",
+    "style": "css/dataTables.semanticui.css",
     "version": "1.10.24",
-    "description": "DataTables for jQuery with styling for [Semantic UI](http://semantic-ui.com/)",
     "files": [
         "css/**/*.css",
-        "js/**/*.js"
+        "js/**/*.js",
+        "images/*"
     ],
-    "main": "js/dataTables.semanticui.js",
     "keywords": [
-        "filter",
-        "sort",
-        "DataTables",
+        "Semantic",
+ "SemanticUI",
+ "Semantic UI",
+        "Datatables",
         "jQuery",
         "table",
-        "Semantic UI"
+        "filter",
+        "sort"
     ],
-    "homepage": "https://datatables.net",
-    "bugs": "https://datatables.net/forums",
-    "license": "MIT",
+    "dependencies": {
+        "datatables.net": ">=1.10.24",
+        "jquery": ">=1.7"
+    },
+    "moduleType": [
+        "globals",
+        "amd",
+        "node"
+    ],
+    "ignore": [
+        "composer.json",
+        "datatables.json",
+        "package.json"
+    ],
     "author": {
         "name": "SpryMedia Ltd",
         "url": "http://datatables.net"
     },
-    "dependencies": {
-        "jquery": ">=1.7",
-        "datatables.net": "1.10.24"
-    },
-    "style": "css/dataTables.semanticui.css",
+    "homepage": "https://datatables.net",
+    "bugs": "https://datatables.net/forums",
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/DataTables/Dist-DataTables-SemanticUI.git"

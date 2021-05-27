@@ -1,13 +1,15 @@
 {
-    "css": [
-        "css/dataTables.semanticui.css",
-        "css/dataTables.semanticui.min.css"
-    ],
     "js": [
         "js/dataTables.semanticui.js",
         "js/dataTables.semanticui.min.js"
     ],
+    "css": [
+        "css/dataTables.semanticui.css",
+        "css/dataTables.semanticui.min.css"
+    ],
+    "types": [
+        "types/dataTables.semanticUI.d.ts"
+    ],
     "src-repo": "http://github.com/DataTables/DataTablesSrc",
-    "last-sync": "a65a9d1d39d7ad187f4050e29285a1de7d793e87",
     "last-tag": "1.10.24"
 }
