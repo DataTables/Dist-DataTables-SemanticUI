@@ -4,7 +4,7 @@
     "main": "js/dataTables.semanticui.js",
     "style": "css/dataTables.semanticui.css",
     "types": "./types/dataTables.semanticUI.d.ts",
-    "version": "1.10.24",
+    "version": "1.10.25",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
@@ -12,8 +12,8 @@
     ],
     "keywords": [
         "Semantic",
- "SemanticUI",
- "Semantic UI",
+        "SemanticUI",
+        "Semantic UI",
         "Datatables",
         "jQuery",
         "table",
@@ -21,8 +21,8 @@
         "sort"
     ],
     "dependencies": {
-        "datatables.net": ">=1.10.24",
-        "jquery": ">=1.7"
+        "jquery": ">=1.7",
+        "datatables.net": "1.10.25"
     },
     "moduleType": [
         "globals",
