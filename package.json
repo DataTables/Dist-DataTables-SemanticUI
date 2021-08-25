@@ -8,12 +8,13 @@
     "files": [
         "css/**/*.css",
         "js/**/*.js",
+        "types/**/*.d.ts",
         "images/*"
     ],
     "keywords": [
         "Semantic",
-        "SemanticUI",
-        "Semantic UI",
+ "SemanticUI",
+ "Semantic UI",
         "Datatables",
         "jQuery",
         "table",
