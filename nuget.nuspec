@@ -10,7 +10,7 @@
         <license type="expression">MIT</license>
         <tags>Semantic  SemanticUI  Semantic UI  Datatables jQuery table</tags>
         <dependencies>
-            <dependency id="datatables.net" version="1.10.25"/>
+            <dependency id="datatables.net" version="1.11.3"/>
             <dependency id="semanticui" version="2.*"/>
         </dependencies>
         <contentFiles>
