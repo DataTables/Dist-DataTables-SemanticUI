@@ -4,7 +4,7 @@
     "main": "js/dataTables.semanticui.js",
     "style": "css/dataTables.semanticui.css",
     "types": "./types/dataTables.semanticUI.d.ts",
-    "version": "1.11.3",
+    "version": "1.11.4",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
@@ -13,8 +13,8 @@
     ],
     "keywords": [
         "Semantic",
- "SemanticUI",
- "Semantic UI",
+        "SemanticUI",
+        "Semantic UI",
         "Datatables",
         "jQuery",
         "table",
