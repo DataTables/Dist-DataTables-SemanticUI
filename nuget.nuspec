@@ -10,7 +10,7 @@
         <license type="expression">MIT</license>
         <tags>Semantic  SemanticUI  Semantic UI  Datatables jQuery table</tags>
         <dependencies>
-            <dependency id="datatables.net" version="1.11.3"/>
+            <dependency id="datatables.net" version="1.11.5"/>
             <dependency id="semanticui" version="2.*"/>
         </dependencies>
         <contentFiles>
@@ -26,8 +26,6 @@
         <file src="css/dataTables.semanticui.css" target="contentFiles\any\any\wwwroot\css"/>
         <file src="css/dataTables.semanticui.min.css" target="content\Content"/>
         <file src="css/dataTables.semanticui.min.css" target="contentFiles\any\any\wwwroot\css"/>
-        <file src="types/dataTables.semanticUI.d.ts" target="content\Scripts"/>
-        <file src="types/dataTables.semanticUI.d.ts" target="contentFiles\any\any\wwwroot\js"/>
     </files>
 </package>
 
