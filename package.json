@@ -2,12 +2,14 @@
     "name": "datatables.net-se",
     "description": "DataTables for jQuery with styling for [SemanticUI](https://semantic-ui.com/)",
     "main": "js/dataTables.semanticui.js",
+    "module": "js/dataTables.semanticui.mjs",
     "style": "css/dataTables.semanticui.css",
     "types": "./types/dataTables.semanticUI.d.ts",
     "version": "1.12.1",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
+        "js/**/*.mjs",
         "types/**/*.d.ts",
         "images/*"
     ],
