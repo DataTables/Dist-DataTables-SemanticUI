@@ -4,7 +4,7 @@
     "main": "js/dataTables.semanticui.js",
     "module": "js/dataTables.semanticui.mjs",
     "style": "css/dataTables.semanticui.css",
-    "types": "./types/dataTables.semanticUI.d.ts",
+    "types": "./types/types.d.ts",
     "version": "1.12.1",
     "files": [
         "css/**/*.css",
