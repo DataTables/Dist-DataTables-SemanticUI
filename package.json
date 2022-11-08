@@ -5,7 +5,7 @@
     "module": "js/dataTables.semanticui.mjs",
     "style": "css/dataTables.semanticui.css",
     "types": "./types/types.d.ts",
-    "version": "1.13.0",
+    "version": "1.13.1",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
