@@ -66,18 +66,18 @@ table.dataTable thead > tr > th:active,
 table.dataTable thead > tr > td:active {
   outline: none;
 }
-table.dataTable thead > tr > th.dt-orderable-asc:before, table.dataTable thead > tr > th.dt-ordering-asc:before,
-table.dataTable thead > tr > td.dt-orderable-asc:before,
-table.dataTable thead > tr > td.dt-ordering-asc:before {
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before {
   position: absolute;
   display: block;
   bottom: 50%;
   content: "▲";
   content: "▲"/"";
 }
-table.dataTable thead > tr > th.dt-orderable-desc:after, table.dataTable thead > tr > th.dt-ordering-desc:after,
-table.dataTable thead > tr > td.dt-orderable-desc:after,
-table.dataTable thead > tr > td.dt-ordering-desc:after {
+table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
   position: absolute;
   display: block;
   top: 50%;
@@ -92,17 +92,28 @@ table.dataTable thead > tr > td.dt-ordering-desc {
   position: relative;
   padding-right: 30px;
 }
-table.dataTable thead > tr > th.dt-orderable-asc:before, table.dataTable thead > tr > th.dt-orderable-asc:after, table.dataTable thead > tr > th.dt-orderable-desc:before, table.dataTable thead > tr > th.dt-orderable-desc:after, table.dataTable thead > tr > th.dt-ordering-asc:before, table.dataTable thead > tr > th.dt-ordering-asc:after, table.dataTable thead > tr > th.dt-ordering-desc:before, table.dataTable thead > tr > th.dt-ordering-desc:after,
-table.dataTable thead > tr > td.dt-orderable-asc:before,
-table.dataTable thead > tr > td.dt-orderable-asc:after,
-table.dataTable thead > tr > td.dt-orderable-desc:before,
-table.dataTable thead > tr > td.dt-orderable-desc:after,
-table.dataTable thead > tr > td.dt-ordering-asc:before,
-table.dataTable thead > tr > td.dt-ordering-asc:after,
-table.dataTable thead > tr > td.dt-ordering-desc:before,
-table.dataTable thead > tr > td.dt-ordering-desc:after {
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  width: 12px;
+}
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:after, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:before, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
+  left: 0;
   opacity: 0.125;
-  right: 1em;
   line-height: 9px;
   font-size: 0.8em;
 }
@@ -117,14 +128,14 @@ table.dataTable thead > tr > td.dt-orderable-desc:hover {
   outline: 2px solid rgba(0, 0, 0, 0.05);
   outline-offset: -2px;
 }
-table.dataTable thead > tr > th.dt-ordering-asc:before, table.dataTable thead > tr > th.dt-ordering-desc:after,
-table.dataTable thead > tr > td.dt-ordering-asc:before,
-table.dataTable thead > tr > td.dt-ordering-desc:after {
+table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
   opacity: 0.6;
 }
-table.dataTable thead > tr > th.sorting_desc_disabled:after, table.dataTable thead > tr > th.sorting_asc_disabled:before,
-table.dataTable thead > tr > td.sorting_desc_disabled:after,
-table.dataTable thead > tr > td.sorting_asc_disabled:before {
+table.dataTable thead > tr > th.sorting_desc_disabled span.dt-column-order:after, table.dataTable thead > tr > th.sorting_asc_disabled span.dt-column-order:before,
+table.dataTable thead > tr > td.sorting_desc_disabled span.dt-column-order:after,
+table.dataTable thead > tr > td.sorting_asc_disabled span.dt-column-order:before {
   display: none;
 }
 table.dataTable thead > tr > th:active,
@@ -215,97 +226,97 @@ div.dt-processing > div:last-child > div:nth-child(4) {
     transform: translate(24px, 0);
   }
 }
-table.dataTable.nowrap th, table.dataTable.nowrap td {
+table.dataTable.ui.table.nowrap th, table.dataTable.ui.table.nowrap td {
   white-space: nowrap;
 }
-table.dataTable th,
-table.dataTable td {
+table.dataTable.ui.table th,
+table.dataTable.ui.table td {
   box-sizing: border-box;
 }
-table.dataTable th.dt-left,
-table.dataTable td.dt-left {
+table.dataTable.ui.table th.dt-left,
+table.dataTable.ui.table td.dt-left {
   text-align: left;
 }
-table.dataTable th.dt-center,
-table.dataTable td.dt-center {
+table.dataTable.ui.table th.dt-center,
+table.dataTable.ui.table td.dt-center {
   text-align: center;
 }
-table.dataTable th.dt-right,
-table.dataTable td.dt-right {
+table.dataTable.ui.table th.dt-right,
+table.dataTable.ui.table td.dt-right {
   text-align: right;
 }
-table.dataTable th.dt-justify,
-table.dataTable td.dt-justify {
+table.dataTable.ui.table th.dt-justify,
+table.dataTable.ui.table td.dt-justify {
   text-align: justify;
 }
-table.dataTable th.dt-nowrap,
-table.dataTable td.dt-nowrap {
+table.dataTable.ui.table th.dt-nowrap,
+table.dataTable.ui.table td.dt-nowrap {
   white-space: nowrap;
 }
-table.dataTable th.dt-empty,
-table.dataTable td.dt-empty {
+table.dataTable.ui.table th.dt-empty,
+table.dataTable.ui.table td.dt-empty {
   text-align: center;
   vertical-align: top;
 }
-table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date,
-table.dataTable td.dt-type-numeric,
-table.dataTable td.dt-type-date {
+table.dataTable.ui.table th.dt-type-numeric, table.dataTable.ui.table th.dt-type-date,
+table.dataTable.ui.table td.dt-type-numeric,
+table.dataTable.ui.table td.dt-type-date {
   text-align: right;
 }
-table.dataTable thead th,
-table.dataTable thead td,
-table.dataTable tfoot th,
-table.dataTable tfoot td {
+table.dataTable.ui.table thead th,
+table.dataTable.ui.table thead td,
+table.dataTable.ui.table tfoot th,
+table.dataTable.ui.table tfoot td {
   text-align: left;
 }
-table.dataTable thead th.dt-head-left,
-table.dataTable thead td.dt-head-left,
-table.dataTable tfoot th.dt-head-left,
-table.dataTable tfoot td.dt-head-left {
+table.dataTable.ui.table thead th.dt-head-left,
+table.dataTable.ui.table thead td.dt-head-left,
+table.dataTable.ui.table tfoot th.dt-head-left,
+table.dataTable.ui.table tfoot td.dt-head-left {
   text-align: left;
 }
-table.dataTable thead th.dt-head-center,
-table.dataTable thead td.dt-head-center,
-table.dataTable tfoot th.dt-head-center,
-table.dataTable tfoot td.dt-head-center {
+table.dataTable.ui.table thead th.dt-head-center,
+table.dataTable.ui.table thead td.dt-head-center,
+table.dataTable.ui.table tfoot th.dt-head-center,
+table.dataTable.ui.table tfoot td.dt-head-center {
   text-align: center;
 }
-table.dataTable thead th.dt-head-right,
-table.dataTable thead td.dt-head-right,
-table.dataTable tfoot th.dt-head-right,
-table.dataTable tfoot td.dt-head-right {
+table.dataTable.ui.table thead th.dt-head-right,
+table.dataTable.ui.table thead td.dt-head-right,
+table.dataTable.ui.table tfoot th.dt-head-right,
+table.dataTable.ui.table tfoot td.dt-head-right {
   text-align: right;
 }
-table.dataTable thead th.dt-head-justify,
-table.dataTable thead td.dt-head-justify,
-table.dataTable tfoot th.dt-head-justify,
-table.dataTable tfoot td.dt-head-justify {
+table.dataTable.ui.table thead th.dt-head-justify,
+table.dataTable.ui.table thead td.dt-head-justify,
+table.dataTable.ui.table tfoot th.dt-head-justify,
+table.dataTable.ui.table tfoot td.dt-head-justify {
   text-align: justify;
 }
-table.dataTable thead th.dt-head-nowrap,
-table.dataTable thead td.dt-head-nowrap,
-table.dataTable tfoot th.dt-head-nowrap,
-table.dataTable tfoot td.dt-head-nowrap {
+table.dataTable.ui.table thead th.dt-head-nowrap,
+table.dataTable.ui.table thead td.dt-head-nowrap,
+table.dataTable.ui.table tfoot th.dt-head-nowrap,
+table.dataTable.ui.table tfoot td.dt-head-nowrap {
   white-space: nowrap;
 }
-table.dataTable tbody th.dt-body-left,
-table.dataTable tbody td.dt-body-left {
+table.dataTable.ui.table tbody th.dt-body-left,
+table.dataTable.ui.table tbody td.dt-body-left {
   text-align: left;
 }
-table.dataTable tbody th.dt-body-center,
-table.dataTable tbody td.dt-body-center {
+table.dataTable.ui.table tbody th.dt-body-center,
+table.dataTable.ui.table tbody td.dt-body-center {
   text-align: center;
 }
-table.dataTable tbody th.dt-body-right,
-table.dataTable tbody td.dt-body-right {
+table.dataTable.ui.table tbody th.dt-body-right,
+table.dataTable.ui.table tbody td.dt-body-right {
   text-align: right;
 }
-table.dataTable tbody th.dt-body-justify,
-table.dataTable tbody td.dt-body-justify {
+table.dataTable.ui.table tbody th.dt-body-justify,
+table.dataTable.ui.table tbody td.dt-body-justify {
   text-align: justify;
 }
-table.dataTable tbody th.dt-body-nowrap,
-table.dataTable tbody td.dt-body-nowrap {
+table.dataTable.ui.table tbody th.dt-body-nowrap,
+table.dataTable.ui.table tbody td.dt-body-nowrap {
   white-space: nowrap;
 }
 
@@ -346,97 +357,97 @@ table.dataTable.table.hover > tbody > tr.selected:hover > * {
   box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), 0.95);
 }
 
-table.dataTable.nowrap th, table.dataTable.nowrap td {
+table.dataTable.ui.table.nowrap th, table.dataTable.ui.table.nowrap td {
   white-space: nowrap;
 }
-table.dataTable th,
-table.dataTable td {
+table.dataTable.ui.table th,
+table.dataTable.ui.table td {
   box-sizing: border-box;
 }
-table.dataTable th.dt-left,
-table.dataTable td.dt-left {
+table.dataTable.ui.table th.dt-left,
+table.dataTable.ui.table td.dt-left {
   text-align: left;
 }
-table.dataTable th.dt-center,
-table.dataTable td.dt-center {
+table.dataTable.ui.table th.dt-center,
+table.dataTable.ui.table td.dt-center {
   text-align: center;
 }
-table.dataTable th.dt-right,
-table.dataTable td.dt-right {
+table.dataTable.ui.table th.dt-right,
+table.dataTable.ui.table td.dt-right {
   text-align: right;
 }
-table.dataTable th.dt-justify,
-table.dataTable td.dt-justify {
+table.dataTable.ui.table th.dt-justify,
+table.dataTable.ui.table td.dt-justify {
   text-align: justify;
 }
-table.dataTable th.dt-nowrap,
-table.dataTable td.dt-nowrap {
+table.dataTable.ui.table th.dt-nowrap,
+table.dataTable.ui.table td.dt-nowrap {
   white-space: nowrap;
 }
-table.dataTable th.dt-empty,
-table.dataTable td.dt-empty {
+table.dataTable.ui.table th.dt-empty,
+table.dataTable.ui.table td.dt-empty {
   text-align: center;
   vertical-align: top;
 }
-table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date,
-table.dataTable td.dt-type-numeric,
-table.dataTable td.dt-type-date {
+table.dataTable.ui.table th.dt-type-numeric, table.dataTable.ui.table th.dt-type-date,
+table.dataTable.ui.table td.dt-type-numeric,
+table.dataTable.ui.table td.dt-type-date {
   text-align: right;
 }
-table.dataTable thead th,
-table.dataTable thead td,
-table.dataTable tfoot th,
-table.dataTable tfoot td {
+table.dataTable.ui.table thead th,
+table.dataTable.ui.table thead td,
+table.dataTable.ui.table tfoot th,
+table.dataTable.ui.table tfoot td {
   text-align: left;
 }
-table.dataTable thead th.dt-head-left,
-table.dataTable thead td.dt-head-left,
-table.dataTable tfoot th.dt-head-left,
-table.dataTable tfoot td.dt-head-left {
+table.dataTable.ui.table thead th.dt-head-left,
+table.dataTable.ui.table thead td.dt-head-left,
+table.dataTable.ui.table tfoot th.dt-head-left,
+table.dataTable.ui.table tfoot td.dt-head-left {
   text-align: left;
 }
-table.dataTable thead th.dt-head-center,
-table.dataTable thead td.dt-head-center,
-table.dataTable tfoot th.dt-head-center,
-table.dataTable tfoot td.dt-head-center {
+table.dataTable.ui.table thead th.dt-head-center,
+table.dataTable.ui.table thead td.dt-head-center,
+table.dataTable.ui.table tfoot th.dt-head-center,
+table.dataTable.ui.table tfoot td.dt-head-center {
   text-align: center;
 }
-table.dataTable thead th.dt-head-right,
-table.dataTable thead td.dt-head-right,
-table.dataTable tfoot th.dt-head-right,
-table.dataTable tfoot td.dt-head-right {
+table.dataTable.ui.table thead th.dt-head-right,
+table.dataTable.ui.table thead td.dt-head-right,
+table.dataTable.ui.table tfoot th.dt-head-right,
+table.dataTable.ui.table tfoot td.dt-head-right {
   text-align: right;
 }
-table.dataTable thead th.dt-head-justify,
-table.dataTable thead td.dt-head-justify,
-table.dataTable tfoot th.dt-head-justify,
-table.dataTable tfoot td.dt-head-justify {
+table.dataTable.ui.table thead th.dt-head-justify,
+table.dataTable.ui.table thead td.dt-head-justify,
+table.dataTable.ui.table tfoot th.dt-head-justify,
+table.dataTable.ui.table tfoot td.dt-head-justify {
   text-align: justify;
 }
-table.dataTable thead th.dt-head-nowrap,
-table.dataTable thead td.dt-head-nowrap,
-table.dataTable tfoot th.dt-head-nowrap,
-table.dataTable tfoot td.dt-head-nowrap {
+table.dataTable.ui.table thead th.dt-head-nowrap,
+table.dataTable.ui.table thead td.dt-head-nowrap,
+table.dataTable.ui.table tfoot th.dt-head-nowrap,
+table.dataTable.ui.table tfoot td.dt-head-nowrap {
   white-space: nowrap;
 }
-table.dataTable tbody th.dt-body-left,
-table.dataTable tbody td.dt-body-left {
+table.dataTable.ui.table tbody th.dt-body-left,
+table.dataTable.ui.table tbody td.dt-body-left {
   text-align: left;
 }
-table.dataTable tbody th.dt-body-center,
-table.dataTable tbody td.dt-body-center {
+table.dataTable.ui.table tbody th.dt-body-center,
+table.dataTable.ui.table tbody td.dt-body-center {
   text-align: center;
 }
-table.dataTable tbody th.dt-body-right,
-table.dataTable tbody td.dt-body-right {
+table.dataTable.ui.table tbody th.dt-body-right,
+table.dataTable.ui.table tbody td.dt-body-right {
   text-align: right;
 }
-table.dataTable tbody th.dt-body-justify,
-table.dataTable tbody td.dt-body-justify {
+table.dataTable.ui.table tbody th.dt-body-justify,
+table.dataTable.ui.table tbody td.dt-body-justify {
   text-align: justify;
 }
-table.dataTable tbody th.dt-body-nowrap,
-table.dataTable tbody td.dt-body-nowrap {
+table.dataTable.ui.table tbody th.dt-body-nowrap,
+table.dataTable.ui.table tbody td.dt-body-nowrap {
   white-space: nowrap;
 }
 
@@ -444,18 +455,18 @@ table.dataTable thead > tr > th:active,
 table.dataTable thead > tr > td:active {
   outline: none;
 }
-table.dataTable thead > tr > th.dt-orderable-asc:before, table.dataTable thead > tr > th.dt-ordering-asc:before,
-table.dataTable thead > tr > td.dt-orderable-asc:before,
-table.dataTable thead > tr > td.dt-ordering-asc:before {
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before {
   position: absolute;
   display: block;
   bottom: 50%;
   content: "▲";
   content: "▲"/"";
 }
-table.dataTable thead > tr > th.dt-orderable-desc:after, table.dataTable thead > tr > th.dt-ordering-desc:after,
-table.dataTable thead > tr > td.dt-orderable-desc:after,
-table.dataTable thead > tr > td.dt-ordering-desc:after {
+table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
   position: absolute;
   display: block;
   top: 50%;
@@ -470,17 +481,28 @@ table.dataTable thead > tr > td.dt-ordering-desc {
   position: relative;
   padding-right: 30px;
 }
-table.dataTable thead > tr > th.dt-orderable-asc:before, table.dataTable thead > tr > th.dt-orderable-asc:after, table.dataTable thead > tr > th.dt-orderable-desc:before, table.dataTable thead > tr > th.dt-orderable-desc:after, table.dataTable thead > tr > th.dt-ordering-asc:before, table.dataTable thead > tr > th.dt-ordering-asc:after, table.dataTable thead > tr > th.dt-ordering-desc:before, table.dataTable thead > tr > th.dt-ordering-desc:after,
-table.dataTable thead > tr > td.dt-orderable-asc:before,
-table.dataTable thead > tr > td.dt-orderable-asc:after,
-table.dataTable thead > tr > td.dt-orderable-desc:before,
-table.dataTable thead > tr > td.dt-orderable-desc:after,
-table.dataTable thead > tr > td.dt-ordering-asc:before,
-table.dataTable thead > tr > td.dt-ordering-asc:after,
-table.dataTable thead > tr > td.dt-ordering-desc:before,
-table.dataTable thead > tr > td.dt-ordering-desc:after {
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  width: 12px;
+}
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:after, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:before, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
+  left: 0;
   opacity: 0.125;
-  right: 1em;
   line-height: 9px;
   font-size: 0.8em;
 }
@@ -495,14 +517,14 @@ table.dataTable thead > tr > td.dt-orderable-desc:hover {
   outline: 2px solid rgba(0, 0, 0, 0.05);
   outline-offset: -2px;
 }
-table.dataTable thead > tr > th.dt-ordering-asc:before, table.dataTable thead > tr > th.dt-ordering-desc:after,
-table.dataTable thead > tr > td.dt-ordering-asc:before,
-table.dataTable thead > tr > td.dt-ordering-desc:after {
+table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
+table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before,
+table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
   opacity: 0.6;
 }
-table.dataTable thead > tr > th.sorting_desc_disabled:after, table.dataTable thead > tr > th.sorting_asc_disabled:before,
-table.dataTable thead > tr > td.sorting_desc_disabled:after,
-table.dataTable thead > tr > td.sorting_asc_disabled:before {
+table.dataTable thead > tr > th.sorting_desc_disabled span.dt-column-order:after, table.dataTable thead > tr > th.sorting_asc_disabled span.dt-column-order:before,
+table.dataTable thead > tr > td.sorting_desc_disabled span.dt-column-order:after,
+table.dataTable thead > tr > td.sorting_asc_disabled span.dt-column-order:before {
   display: none;
 }
 table.dataTable thead > tr > th:active,
