@@ -25,10 +25,12 @@ table.dataTable tr.dt-hasChild td.dt-control:before {
   content: "▼";
 }
 
-html.dark table.dataTable td.dt-control:before {
+html.dark table.dataTable td.dt-control:before,
+:root[data-bs-theme=dark] table.dataTable td.dt-control:before {
   color: rgba(255, 255, 255, 0.5);
 }
-html.dark table.dataTable tr.dt-hasChild td.dt-control:before {
+html.dark table.dataTable tr.dt-hasChild td.dt-control:before,
+:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -124,7 +126,7 @@ div.dataTables_processing > div:last-child > div {
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: #e0e0e0;
+  background: rgb(224, 224, 224);
   background: rgb(var(--dt-row-selected));
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
@@ -276,13 +278,13 @@ table.dataTable.table > tbody > tr {
   background-color: transparent;
 }
 table.dataTable.table > tbody > tr.selected > * {
-  box-shadow: inset 0 0 0 9999px #e0e0e0;
+  box-shadow: inset 0 0 0 9999px rgb(224, 224, 224);
   box-shadow: inset 0 0 0 9999px rgb(var(--dt-row-selected));
-  color: black;
+  color: rgb(0, 0, 0);
   color: rgb(var(--dt-row-selected-text));
 }
 table.dataTable.table > tbody > tr.selected a {
-  color: #090a0b;
+  color: rgb(9, 10, 11);
   color: rgb(var(--dt-row-selected-link));
 }
 table.dataTable.table.striped > tbody > tr.odd > * {
