@@ -25,7 +25,7 @@ $.extend( true, DataTable.defaults, {
 
 /* Default class modification */
 $.extend( true, DataTable.ext.classes, {
-	container: "dt-container dt-semanticUI ui stackable grid",
+	container: "dt-container dt-semanticUI",
 	search: {
 		input: "dt-search ui input"
 	},
@@ -83,36 +83,6 @@ $(document).on( 'init.dt', function (e, ctx) {
 	$( 'div.dt-search.ui.input', api.table().container() ).removeClass('input').addClass('form');
 	$( 'div.dt-search input', api.table().container() ).wrap( '<span class="ui input" />' );
 } );
-
-
-DataTable.ext.renderer.layout.semanticUI = function ( settings, container, items ) {
-	var row = $( '<div/>', {
-			"class": items.full ?
-				'row' :
-				'row'
-		} )
-		.appendTo( container );
-
-	$.each( items, function (key, val) {
-		var klass = '';
-		if ( key === 'start' ) {
-			klass += 'left floated eight wide column';
-		}
-		else if ( key === 'end' ) {
-			klass += 'right floated right aligned eight wide column';
-		}
-		else if ( key === 'full' ) {
-			klass += 'center aligned sixteen wide column';
-		}
-
-		$( '<div/>', {
-				id: val.id || null,
-				"class": klass+' '+(val.className || '')
-			} )
-			.append( val.contents )
-			.appendTo( row );
-	} );
-};
 
 
 export default DataTable;

@@ -33,13 +33,19 @@ table.dataTable tr.dt-hasChild td.dt-control:before {
 }
 
 html.dark table.dataTable td.dt-control:before,
-:root[data-bs-theme=dark] table.dataTable td.dt-control:before {
+:root[data-bs-theme=dark] table.dataTable td.dt-control:before,
+:root[data-theme=dark] table.dataTable td.dt-control:before {
   border-left-color: rgba(255, 255, 255, 0.5);
 }
 html.dark table.dataTable tr.dt-hasChild td.dt-control:before,
-:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
+:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before,
+:root[data-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
   border-top-color: rgba(255, 255, 255, 0.5);
   border-left-color: transparent;
+}
+
+div.dt-scroll {
+  width: 100%;
 }
 
 div.dt-scroll-body thead tr,
@@ -547,7 +553,75 @@ div.dt-scroll-body > table.dataTable > thead > tr > td {
   outline: 2px solid rgba(255, 255, 255, 0.05);
 }
 
+div.dt-container div.dt-layout-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0.75em 0;
+}
+div.dt-container div.dt-layout-row div.dt-layout-cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+  justify-content: flex-start;
+  margin-right: auto;
+}
+div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+  justify-content: flex-end;
+  margin-left: auto;
+}
+div.dt-container div.dt-layout-row div.dt-layout-cell:empty {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  div.dt-container div.dt-layout-row {
+    display: block;
+  }
+  div.dt-container div.dt-layout-row div.dt-layout-cell {
+    display: block;
+    text-align: center;
+  }
+  div.dt-container div.dt-layout-row div.dt-layout-cell > * {
+    margin: 0.5em 0;
+  }
+  div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+    margin-right: 0;
+  }
+  div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+    margin-left: 0;
+  }
+}
+div.dt-container div.dt-layout-start > *:not(:last-child) {
+  margin-right: 1em;
+}
+div.dt-container div.dt-layout-end > *:not(:first-child) {
+  margin-left: 1em;
+}
+div.dt-container div.dt-layout-full {
+  width: 100%;
+}
+div.dt-container div.dt-layout-full > *:only-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+div.dt-container div.dt-layout-table > div {
+  display: block !important;
+}
+
+@media screen and (max-width: 767px) {
+  div.dt-container div.dt-layout-start > *:not(:last-child) {
+    margin-right: 0;
+  }
+  div.dt-container div.dt-layout-end > *:not(:first-child) {
+    margin-left: 0;
+  }
+}
 div.dt-container.ui.grid > div.row {
+  display: flex;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -569,7 +643,6 @@ div.dt-container.ui.grid div.dt-search span.input {
 }
 div.dt-container.ui.grid div.dt-info {
   white-space: nowrap;
-  padding-top: 10px;
 }
 div.dt-container.ui.grid div.dt-processing {
   position: absolute;
