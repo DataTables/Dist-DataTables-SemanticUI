@@ -578,20 +578,20 @@ div.dt-container div.dt-layout-row div.dt-layout-cell:empty {
 }
 
 @media screen and (max-width: 767px) {
-  div.dt-container div.dt-layout-row {
+  div.dt-container div.dt-layout-row:not(.dt-layout-table) {
     display: block;
   }
-  div.dt-container div.dt-layout-row div.dt-layout-cell {
+  div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell {
     display: block;
     text-align: center;
   }
-  div.dt-container div.dt-layout-row div.dt-layout-cell > * {
+  div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell > * {
     margin: 0.5em 0;
   }
-  div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-start {
+  div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell.dt-layout-start {
     margin-right: 0;
   }
-  div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+  div.dt-container div.dt-layout-row:not(.dt-layout-table) div.dt-layout-cell.dt-layout-end {
     margin-left: 0;
   }
 }
@@ -620,31 +620,31 @@ div.dt-container div.dt-layout-table > div {
     margin-left: 0;
   }
 }
-div.dt-container.ui.grid > div.row {
+div.dt-container.dt-semanticUI > div.row {
   display: flex;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-div.dt-container.ui.grid > div.row:first-child {
+div.dt-container.dt-semanticUI > div.row:first-child {
   padding-top: 1rem;
 }
-div.dt-container.ui.grid > div.row:last-child {
+div.dt-container.dt-semanticUI > div.row:last-child {
   padding-bottom: 1rem;
 }
-div.dt-container.ui.grid div.dt-length select {
+div.dt-container.dt-semanticUI div.dt-length select {
   vertical-align: middle;
   min-height: 2.7142em;
 }
-div.dt-container.ui.grid div.dt-length .ui.selection.dropdown {
+div.dt-container.dt-semanticUI div.dt-length .ui.selection.dropdown {
   min-width: 0;
 }
-div.dt-container.ui.grid div.dt-search span.input {
+div.dt-container.dt-semanticUI div.dt-search span.input {
   margin-left: 0.5em;
 }
-div.dt-container.ui.grid div.dt-info {
+div.dt-container.dt-semanticUI div.dt-info {
   white-space: nowrap;
 }
-div.dt-container.ui.grid div.dt-processing {
+div.dt-container.dt-semanticUI div.dt-processing {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -652,28 +652,28 @@ div.dt-container.ui.grid div.dt-processing {
   margin-left: -100px;
   text-align: center;
 }
-div.dt-container.ui.grid div.dt-scroll {
+div.dt-container.dt-semanticUI div.dt-scroll {
   width: 100%;
   padding: 0;
 }
-div.dt-container.ui.grid div.dt-scroll-head table.dataTable {
+div.dt-container.dt-semanticUI div.dt-scroll-head table.dataTable {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-bottom: none;
 }
-div.dt-container.ui.grid div.dt-scroll-body thead .dt-orderable-asc:before,
-div.dt-container.ui.grid div.dt-scroll-body thead .dt-orderable-desc:after {
+div.dt-container.dt-semanticUI div.dt-scroll-body thead .dt-orderable-asc:before,
+div.dt-container.dt-semanticUI div.dt-scroll-body thead .dt-orderable-desc:after {
   display: none;
 }
-div.dt-container.ui.grid div.dt-scroll-body table.dataTable {
+div.dt-container.dt-semanticUI div.dt-scroll-body table.dataTable {
   border-radius: 0;
   border-top: none;
   border-bottom-width: 0;
 }
-div.dt-container.ui.grid div.dt-scroll-body table.dataTable.no-footer {
+div.dt-container.dt-semanticUI div.dt-scroll-body table.dataTable.no-footer {
   border-bottom-width: 1px;
 }
-div.dt-container.ui.grid div.dt-scroll-foot table.dataTable {
+div.dt-container.dt-semanticUI div.dt-scroll-foot table.dataTable {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   border-top: none;
