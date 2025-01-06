@@ -242,6 +242,11 @@ table.dataTable.ui.table th,
 table.dataTable.ui.table td {
   box-sizing: border-box;
 }
+table.dataTable.ui.table th.dt-type-numeric, table.dataTable.ui.table th.dt-type-date,
+table.dataTable.ui.table td.dt-type-numeric,
+table.dataTable.ui.table td.dt-type-date {
+  text-align: right;
+}
 table.dataTable.ui.table th.dt-left,
 table.dataTable.ui.table td.dt-left {
   text-align: left;
@@ -266,11 +271,6 @@ table.dataTable.ui.table th.dt-empty,
 table.dataTable.ui.table td.dt-empty {
   text-align: center;
   vertical-align: top;
-}
-table.dataTable.ui.table th.dt-type-numeric, table.dataTable.ui.table th.dt-type-date,
-table.dataTable.ui.table td.dt-type-numeric,
-table.dataTable.ui.table td.dt-type-date {
-  text-align: right;
 }
 table.dataTable.ui.table thead th,
 table.dataTable.ui.table thead td,
@@ -373,6 +373,11 @@ table.dataTable.ui.table th,
 table.dataTable.ui.table td {
   box-sizing: border-box;
 }
+table.dataTable.ui.table th.dt-type-numeric, table.dataTable.ui.table th.dt-type-date,
+table.dataTable.ui.table td.dt-type-numeric,
+table.dataTable.ui.table td.dt-type-date {
+  text-align: right;
+}
 table.dataTable.ui.table th.dt-left,
 table.dataTable.ui.table td.dt-left {
   text-align: left;
@@ -397,11 +402,6 @@ table.dataTable.ui.table th.dt-empty,
 table.dataTable.ui.table td.dt-empty {
   text-align: center;
   vertical-align: top;
-}
-table.dataTable.ui.table th.dt-type-numeric, table.dataTable.ui.table th.dt-type-date,
-table.dataTable.ui.table td.dt-type-numeric,
-table.dataTable.ui.table td.dt-type-date {
-  text-align: right;
 }
 table.dataTable.ui.table thead th,
 table.dataTable.ui.table thead td,
