@@ -720,6 +720,9 @@ div.dt-container div.dt-layout-table > div {
     margin-left: 0;
   }
 }
+div.dt-container.dt-semanticUI {
+  position: relative;
+}
 div.dt-container.dt-semanticUI > div.row {
   display: flex;
   padding-top: 0.5rem;
