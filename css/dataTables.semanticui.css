@@ -413,6 +413,18 @@ table.dataTable.table.hover > tbody > tr.selected:hover > * {
   box-shadow: inset 0 0 0 9999px rgba(224, 224, 224, 0.95);
   box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), 0.95);
 }
+table.dataTable.table > thead > tr > td {
+  text-align: inherit;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 0.5em 0.78571429em;
+  vertical-align: inherit;
+  font-style: none;
+  text-transform: none;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+}
+table.dataTable.table.celled > thead > tr > td:not(:first-child) {
+  border-left: 1px solid rgba(34, 36, 38, 0.1);
+}
 
 table.dataTable.ui.table.nowrap th, table.dataTable.ui.table.nowrap td {
   white-space: nowrap;
