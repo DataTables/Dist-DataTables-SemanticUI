@@ -283,6 +283,12 @@ table.dataTable.ui.table th.dt-left,
 table.dataTable.ui.table td.dt-left {
   text-align: left;
 }
+table.dataTable.ui.table th.dt-left div.dt-column-header,
+table.dataTable.ui.table th.dt-left div.dt-column-footer,
+table.dataTable.ui.table td.dt-left div.dt-column-header,
+table.dataTable.ui.table td.dt-left div.dt-column-footer {
+  flex-direction: row;
+}
 table.dataTable.ui.table th.dt-center,
 table.dataTable.ui.table td.dt-center {
   text-align: center;
@@ -300,6 +306,12 @@ table.dataTable.ui.table td.dt-right div.dt-column-footer {
 table.dataTable.ui.table th.dt-justify,
 table.dataTable.ui.table td.dt-justify {
   text-align: justify;
+}
+table.dataTable.ui.table th.dt-justify div.dt-column-header,
+table.dataTable.ui.table th.dt-justify div.dt-column-footer,
+table.dataTable.ui.table td.dt-justify div.dt-column-header,
+table.dataTable.ui.table td.dt-justify div.dt-column-footer {
+  flex-direction: row;
 }
 table.dataTable.ui.table th.dt-nowrap,
 table.dataTable.ui.table td.dt-nowrap {
@@ -321,6 +333,16 @@ table.dataTable.ui.table thead td.dt-head-left,
 table.dataTable.ui.table tfoot th.dt-head-left,
 table.dataTable.ui.table tfoot td.dt-head-left {
   text-align: left;
+}
+table.dataTable.ui.table thead th.dt-head-left div.dt-column-header,
+table.dataTable.ui.table thead th.dt-head-left div.dt-column-footer,
+table.dataTable.ui.table thead td.dt-head-left div.dt-column-header,
+table.dataTable.ui.table thead td.dt-head-left div.dt-column-footer,
+table.dataTable.ui.table tfoot th.dt-head-left div.dt-column-header,
+table.dataTable.ui.table tfoot th.dt-head-left div.dt-column-footer,
+table.dataTable.ui.table tfoot td.dt-head-left div.dt-column-header,
+table.dataTable.ui.table tfoot td.dt-head-left div.dt-column-footer {
+  flex-direction: row;
 }
 table.dataTable.ui.table thead th.dt-head-center,
 table.dataTable.ui.table thead td.dt-head-center,
@@ -349,6 +371,16 @@ table.dataTable.ui.table thead td.dt-head-justify,
 table.dataTable.ui.table tfoot th.dt-head-justify,
 table.dataTable.ui.table tfoot td.dt-head-justify {
   text-align: justify;
+}
+table.dataTable.ui.table thead th.dt-head-justify div.dt-column-header,
+table.dataTable.ui.table thead th.dt-head-justify div.dt-column-footer,
+table.dataTable.ui.table thead td.dt-head-justify div.dt-column-header,
+table.dataTable.ui.table thead td.dt-head-justify div.dt-column-footer,
+table.dataTable.ui.table tfoot th.dt-head-justify div.dt-column-header,
+table.dataTable.ui.table tfoot th.dt-head-justify div.dt-column-footer,
+table.dataTable.ui.table tfoot td.dt-head-justify div.dt-column-header,
+table.dataTable.ui.table tfoot td.dt-head-justify div.dt-column-footer {
+  flex-direction: row;
 }
 table.dataTable.ui.table thead th.dt-head-nowrap,
 table.dataTable.ui.table thead td.dt-head-nowrap,
@@ -451,6 +483,12 @@ table.dataTable.ui.table th.dt-left,
 table.dataTable.ui.table td.dt-left {
   text-align: left;
 }
+table.dataTable.ui.table th.dt-left div.dt-column-header,
+table.dataTable.ui.table th.dt-left div.dt-column-footer,
+table.dataTable.ui.table td.dt-left div.dt-column-header,
+table.dataTable.ui.table td.dt-left div.dt-column-footer {
+  flex-direction: row;
+}
 table.dataTable.ui.table th.dt-center,
 table.dataTable.ui.table td.dt-center {
   text-align: center;
@@ -468,6 +506,12 @@ table.dataTable.ui.table td.dt-right div.dt-column-footer {
 table.dataTable.ui.table th.dt-justify,
 table.dataTable.ui.table td.dt-justify {
   text-align: justify;
+}
+table.dataTable.ui.table th.dt-justify div.dt-column-header,
+table.dataTable.ui.table th.dt-justify div.dt-column-footer,
+table.dataTable.ui.table td.dt-justify div.dt-column-header,
+table.dataTable.ui.table td.dt-justify div.dt-column-footer {
+  flex-direction: row;
 }
 table.dataTable.ui.table th.dt-nowrap,
 table.dataTable.ui.table td.dt-nowrap {
@@ -489,6 +533,16 @@ table.dataTable.ui.table thead td.dt-head-left,
 table.dataTable.ui.table tfoot th.dt-head-left,
 table.dataTable.ui.table tfoot td.dt-head-left {
   text-align: left;
+}
+table.dataTable.ui.table thead th.dt-head-left div.dt-column-header,
+table.dataTable.ui.table thead th.dt-head-left div.dt-column-footer,
+table.dataTable.ui.table thead td.dt-head-left div.dt-column-header,
+table.dataTable.ui.table thead td.dt-head-left div.dt-column-footer,
+table.dataTable.ui.table tfoot th.dt-head-left div.dt-column-header,
+table.dataTable.ui.table tfoot th.dt-head-left div.dt-column-footer,
+table.dataTable.ui.table tfoot td.dt-head-left div.dt-column-header,
+table.dataTable.ui.table tfoot td.dt-head-left div.dt-column-footer {
+  flex-direction: row;
 }
 table.dataTable.ui.table thead th.dt-head-center,
 table.dataTable.ui.table thead td.dt-head-center,
@@ -517,6 +571,16 @@ table.dataTable.ui.table thead td.dt-head-justify,
 table.dataTable.ui.table tfoot th.dt-head-justify,
 table.dataTable.ui.table tfoot td.dt-head-justify {
   text-align: justify;
+}
+table.dataTable.ui.table thead th.dt-head-justify div.dt-column-header,
+table.dataTable.ui.table thead th.dt-head-justify div.dt-column-footer,
+table.dataTable.ui.table thead td.dt-head-justify div.dt-column-header,
+table.dataTable.ui.table thead td.dt-head-justify div.dt-column-footer,
+table.dataTable.ui.table tfoot th.dt-head-justify div.dt-column-header,
+table.dataTable.ui.table tfoot th.dt-head-justify div.dt-column-footer,
+table.dataTable.ui.table tfoot td.dt-head-justify div.dt-column-header,
+table.dataTable.ui.table tfoot td.dt-head-justify div.dt-column-footer {
+  flex-direction: row;
 }
 table.dataTable.ui.table thead th.dt-head-nowrap,
 table.dataTable.ui.table thead td.dt-head-nowrap,
