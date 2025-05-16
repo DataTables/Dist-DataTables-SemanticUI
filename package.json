@@ -5,7 +5,7 @@
     "module": "js/dataTables.semanticui.mjs",
     "style": "css/dataTables.semanticui.css",
     "types": "./types/dataTables.semanticui.d.ts",
-    "version": "2.3.0",
+    "version": "2.3.1",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
@@ -23,7 +23,7 @@
         "sort"
     ],
     "dependencies": {
-        "datatables.net": "2.3.0",
+        "datatables.net": "2.3.1",
         "jquery": ">=1.7"
     },
     "moduleType": [
