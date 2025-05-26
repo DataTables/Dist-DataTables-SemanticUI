@@ -5,6 +5,7 @@
   --dt-row-stripe: 0, 0, 0;
   --dt-row-hover: 0, 0, 0;
   --dt-column-ordering: 0, 0, 0;
+  --dt-header-align-items: center;
   --dt-html-background: white;
 }
 :root.dark {
@@ -278,6 +279,7 @@ table.dataTable.ui.table td.dt-type-numeric div.dt-column-footer,
 table.dataTable.ui.table td.dt-type-date div.dt-column-header,
 table.dataTable.ui.table td.dt-type-date div.dt-column-footer {
   flex-direction: row-reverse;
+  align-items: var(--dt-header-align-items);
 }
 table.dataTable.ui.table th.dt-left,
 table.dataTable.ui.table td.dt-left {
@@ -478,6 +480,7 @@ table.dataTable.ui.table td.dt-type-numeric div.dt-column-footer,
 table.dataTable.ui.table td.dt-type-date div.dt-column-header,
 table.dataTable.ui.table td.dt-type-date div.dt-column-footer {
   flex-direction: row-reverse;
+  align-items: var(--dt-header-align-items);
 }
 table.dataTable.ui.table th.dt-left,
 table.dataTable.ui.table td.dt-left {
