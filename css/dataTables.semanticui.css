@@ -266,6 +266,12 @@ table.dataTable.ui.table th,
 table.dataTable.ui.table td {
   box-sizing: border-box;
 }
+table.dataTable.ui.table th div.dt-column-header,
+table.dataTable.ui.table th div.dt-column-footer,
+table.dataTable.ui.table td div.dt-column-header,
+table.dataTable.ui.table td div.dt-column-footer {
+  align-items: var(--dt-header-align-items);
+}
 table.dataTable.ui.table th.dt-type-numeric, table.dataTable.ui.table th.dt-type-date,
 table.dataTable.ui.table td.dt-type-numeric,
 table.dataTable.ui.table td.dt-type-date {
@@ -279,7 +285,6 @@ table.dataTable.ui.table td.dt-type-numeric div.dt-column-footer,
 table.dataTable.ui.table td.dt-type-date div.dt-column-header,
 table.dataTable.ui.table td.dt-type-date div.dt-column-footer {
   flex-direction: row-reverse;
-  align-items: var(--dt-header-align-items);
 }
 table.dataTable.ui.table th.dt-left,
 table.dataTable.ui.table td.dt-left {
@@ -467,6 +472,12 @@ table.dataTable.ui.table th,
 table.dataTable.ui.table td {
   box-sizing: border-box;
 }
+table.dataTable.ui.table th div.dt-column-header,
+table.dataTable.ui.table th div.dt-column-footer,
+table.dataTable.ui.table td div.dt-column-header,
+table.dataTable.ui.table td div.dt-column-footer {
+  align-items: var(--dt-header-align-items);
+}
 table.dataTable.ui.table th.dt-type-numeric, table.dataTable.ui.table th.dt-type-date,
 table.dataTable.ui.table td.dt-type-numeric,
 table.dataTable.ui.table td.dt-type-date {
@@ -480,7 +491,6 @@ table.dataTable.ui.table td.dt-type-numeric div.dt-column-footer,
 table.dataTable.ui.table td.dt-type-date div.dt-column-header,
 table.dataTable.ui.table td.dt-type-date div.dt-column-footer {
   flex-direction: row-reverse;
-  align-items: var(--dt-header-align-items);
 }
 table.dataTable.ui.table th.dt-left,
 table.dataTable.ui.table td.dt-left {
