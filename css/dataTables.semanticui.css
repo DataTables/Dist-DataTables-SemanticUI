@@ -6,6 +6,7 @@
   --dt-row-hover: 0, 0, 0;
   --dt-column-ordering: 0, 0, 0;
   --dt-header-align-items: center;
+  --dt-header-vertical-align: middle;
   --dt-html-background: white;
 }
 :root.dark {
@@ -329,6 +330,7 @@ table.dataTable.ui.table thead td,
 table.dataTable.ui.table tfoot th,
 table.dataTable.ui.table tfoot td {
   text-align: left;
+  vertical-align: var(--dt-header-vertical-align);
 }
 table.dataTable.ui.table thead th.dt-head-left,
 table.dataTable.ui.table thead td.dt-head-left,
@@ -529,6 +531,7 @@ table.dataTable.ui.table thead td,
 table.dataTable.ui.table tfoot th,
 table.dataTable.ui.table tfoot td {
   text-align: left;
+  vertical-align: var(--dt-header-vertical-align);
 }
 table.dataTable.ui.table thead th.dt-head-left,
 table.dataTable.ui.table thead td.dt-head-left,
