@@ -462,162 +462,92 @@ table.dataTable.table.celled > thead > tr > td:not(:first-child) {
   border-left: 1px solid rgba(34, 36, 38, 0.1);
 }
 
-table.dataTable.ui.table.nowrap th, table.dataTable.ui.table.nowrap td {
-  white-space: nowrap;
+:root {
+  --dt-row-selected: 224, 224, 224;
+  --dt-row-selected-text: 0, 0, 0;
+  --dt-row-selected-link: 228, 228, 228;
+  --dt-row-stripe: 0, 0, 0;
+  --dt-row-hover: 0, 0, 0;
+  --dt-column-ordering: 0, 0, 0;
+  --dt-header-align-items: center;
+  --dt-header-vertical-align: middle;
+  --dt-html-background: white;
 }
-table.dataTable.ui.table th,
-table.dataTable.ui.table td {
+
+:root.dark {
+  --dt-html-background: rgb(33, 37, 41);
+}
+
+table.dataTable tbody td.dt-control {
+  text-align: center;
+  cursor: pointer;
+}
+
+table.dataTable tbody td.dt-control:before {
+  display: inline-block;
   box-sizing: border-box;
+  content: "";
+  border-top: 5px solid transparent;
+  border-left: 10px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 5px solid transparent;
+  border-right: 0px solid transparent;
 }
-table.dataTable.ui.table th.dt-type-numeric, table.dataTable.ui.table th.dt-type-date,
-table.dataTable.ui.table td.dt-type-numeric,
-table.dataTable.ui.table td.dt-type-date {
-  text-align: right;
+
+table.dataTable tbody tr.dt-hasChild td.dt-control:before {
+  border-top: 10px solid rgba(0, 0, 0, 0.5);
+  border-left: 5px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-right: 5px solid transparent;
 }
-table.dataTable.ui.table th.dt-type-numeric div.dt-column-header,
-table.dataTable.ui.table th.dt-type-numeric div.dt-column-footer, table.dataTable.ui.table th.dt-type-date div.dt-column-header,
-table.dataTable.ui.table th.dt-type-date div.dt-column-footer,
-table.dataTable.ui.table td.dt-type-numeric div.dt-column-header,
-table.dataTable.ui.table td.dt-type-numeric div.dt-column-footer,
-table.dataTable.ui.table td.dt-type-date div.dt-column-header,
-table.dataTable.ui.table td.dt-type-date div.dt-column-footer {
-  flex-direction: row-reverse;
+
+table.dataTable tfoot:empty {
+  display: none;
 }
-table.dataTable.ui.table th.dt-left,
-table.dataTable.ui.table td.dt-left {
-  text-align: left;
+
+html.dark table.dataTable td.dt-control:before,
+:root[data-bs-theme=dark] table.dataTable td.dt-control:before,
+:root[data-theme=dark] table.dataTable td.dt-control:before {
+  border-left-color: rgba(255, 255, 255, 0.5);
 }
-table.dataTable.ui.table th.dt-left div.dt-column-header,
-table.dataTable.ui.table th.dt-left div.dt-column-footer,
-table.dataTable.ui.table td.dt-left div.dt-column-header,
-table.dataTable.ui.table td.dt-left div.dt-column-footer {
-  flex-direction: row;
+
+html.dark table.dataTable tr.dt-hasChild td.dt-control:before,
+:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before,
+:root[data-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
+  border-top-color: rgba(255, 255, 255, 0.5);
+  border-left-color: transparent;
 }
-table.dataTable.ui.table th.dt-center,
-table.dataTable.ui.table td.dt-center {
-  text-align: center;
+
+div.dt-scroll {
+  width: 100%;
 }
-table.dataTable.ui.table th.dt-right,
-table.dataTable.ui.table td.dt-right {
-  text-align: right;
+
+div.dt-scroll-body thead tr,
+div.dt-scroll-body tfoot tr {
+  height: 0;
 }
-table.dataTable.ui.table th.dt-right div.dt-column-header,
-table.dataTable.ui.table th.dt-right div.dt-column-footer,
-table.dataTable.ui.table td.dt-right div.dt-column-header,
-table.dataTable.ui.table td.dt-right div.dt-column-footer {
-  flex-direction: row-reverse;
+
+div.dt-scroll-body thead tr th, div.dt-scroll-body thead tr td,
+div.dt-scroll-body tfoot tr th,
+div.dt-scroll-body tfoot tr td {
+  height: 0 !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  border-top-width: 0px !important;
+  border-bottom-width: 0px !important;
 }
-table.dataTable.ui.table th.dt-justify,
-table.dataTable.ui.table td.dt-justify {
-  text-align: justify;
-}
-table.dataTable.ui.table th.dt-justify div.dt-column-header,
-table.dataTable.ui.table th.dt-justify div.dt-column-footer,
-table.dataTable.ui.table td.dt-justify div.dt-column-header,
-table.dataTable.ui.table td.dt-justify div.dt-column-footer {
-  flex-direction: row;
-}
-table.dataTable.ui.table th.dt-nowrap,
-table.dataTable.ui.table td.dt-nowrap {
-  white-space: nowrap;
-}
-table.dataTable.ui.table th.dt-empty,
-table.dataTable.ui.table td.dt-empty {
-  text-align: center;
-  vertical-align: top;
-}
-table.dataTable.ui.table thead th,
-table.dataTable.ui.table thead td,
-table.dataTable.ui.table tfoot th,
-table.dataTable.ui.table tfoot td {
-  text-align: left;
-  vertical-align: var(--dt-header-vertical-align);
-}
-table.dataTable.ui.table thead th.dt-head-left,
-table.dataTable.ui.table thead td.dt-head-left,
-table.dataTable.ui.table tfoot th.dt-head-left,
-table.dataTable.ui.table tfoot td.dt-head-left {
-  text-align: left;
-}
-table.dataTable.ui.table thead th.dt-head-left div.dt-column-header,
-table.dataTable.ui.table thead th.dt-head-left div.dt-column-footer,
-table.dataTable.ui.table thead td.dt-head-left div.dt-column-header,
-table.dataTable.ui.table thead td.dt-head-left div.dt-column-footer,
-table.dataTable.ui.table tfoot th.dt-head-left div.dt-column-header,
-table.dataTable.ui.table tfoot th.dt-head-left div.dt-column-footer,
-table.dataTable.ui.table tfoot td.dt-head-left div.dt-column-header,
-table.dataTable.ui.table tfoot td.dt-head-left div.dt-column-footer {
-  flex-direction: row;
-}
-table.dataTable.ui.table thead th.dt-head-center,
-table.dataTable.ui.table thead td.dt-head-center,
-table.dataTable.ui.table tfoot th.dt-head-center,
-table.dataTable.ui.table tfoot td.dt-head-center {
-  text-align: center;
-}
-table.dataTable.ui.table thead th.dt-head-right,
-table.dataTable.ui.table thead td.dt-head-right,
-table.dataTable.ui.table tfoot th.dt-head-right,
-table.dataTable.ui.table tfoot td.dt-head-right {
-  text-align: right;
-}
-table.dataTable.ui.table thead th.dt-head-right div.dt-column-header,
-table.dataTable.ui.table thead th.dt-head-right div.dt-column-footer,
-table.dataTable.ui.table thead td.dt-head-right div.dt-column-header,
-table.dataTable.ui.table thead td.dt-head-right div.dt-column-footer,
-table.dataTable.ui.table tfoot th.dt-head-right div.dt-column-header,
-table.dataTable.ui.table tfoot th.dt-head-right div.dt-column-footer,
-table.dataTable.ui.table tfoot td.dt-head-right div.dt-column-header,
-table.dataTable.ui.table tfoot td.dt-head-right div.dt-column-footer {
-  flex-direction: row-reverse;
-}
-table.dataTable.ui.table thead th.dt-head-justify,
-table.dataTable.ui.table thead td.dt-head-justify,
-table.dataTable.ui.table tfoot th.dt-head-justify,
-table.dataTable.ui.table tfoot td.dt-head-justify {
-  text-align: justify;
-}
-table.dataTable.ui.table thead th.dt-head-justify div.dt-column-header,
-table.dataTable.ui.table thead th.dt-head-justify div.dt-column-footer,
-table.dataTable.ui.table thead td.dt-head-justify div.dt-column-header,
-table.dataTable.ui.table thead td.dt-head-justify div.dt-column-footer,
-table.dataTable.ui.table tfoot th.dt-head-justify div.dt-column-header,
-table.dataTable.ui.table tfoot th.dt-head-justify div.dt-column-footer,
-table.dataTable.ui.table tfoot td.dt-head-justify div.dt-column-header,
-table.dataTable.ui.table tfoot td.dt-head-justify div.dt-column-footer {
-  flex-direction: row;
-}
-table.dataTable.ui.table thead th.dt-head-nowrap,
-table.dataTable.ui.table thead td.dt-head-nowrap,
-table.dataTable.ui.table tfoot th.dt-head-nowrap,
-table.dataTable.ui.table tfoot td.dt-head-nowrap {
-  white-space: nowrap;
-}
-table.dataTable.ui.table tbody th.dt-body-left,
-table.dataTable.ui.table tbody td.dt-body-left {
-  text-align: left;
-}
-table.dataTable.ui.table tbody th.dt-body-center,
-table.dataTable.ui.table tbody td.dt-body-center {
-  text-align: center;
-}
-table.dataTable.ui.table tbody th.dt-body-right,
-table.dataTable.ui.table tbody td.dt-body-right {
-  text-align: right;
-}
-table.dataTable.ui.table tbody th.dt-body-justify,
-table.dataTable.ui.table tbody td.dt-body-justify {
-  text-align: justify;
-}
-table.dataTable.ui.table tbody th.dt-body-nowrap,
-table.dataTable.ui.table tbody td.dt-body-nowrap {
-  white-space: nowrap;
+
+div.dt-scroll-body thead tr th div.dt-scroll-sizing, div.dt-scroll-body thead tr td div.dt-scroll-sizing,
+div.dt-scroll-body tfoot tr th div.dt-scroll-sizing,
+div.dt-scroll-body tfoot tr td div.dt-scroll-sizing {
+  height: 0 !important;
+  overflow: hidden !important;
 }
 
 table.dataTable thead > tr > th:active,
 table.dataTable thead > tr > td:active {
   outline: none;
 }
+
 table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before,
 table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:before,
 table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before {
@@ -627,6 +557,7 @@ table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before {
   content: "\25B2";
   content: "\25B2"/"";
 }
+
 table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
 table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order:after,
 table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
@@ -636,6 +567,7 @@ table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
   content: "\25BC";
   content: "\25BC"/"";
 }
+
 table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order,
 table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order,
 table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order,
@@ -645,6 +577,7 @@ table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order {
   width: 12px;
   height: 20px;
 }
+
 table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order:after, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:before, table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:after, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
 table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:before,
 table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order:after,
@@ -659,28 +592,33 @@ table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
   line-height: 9px;
   font-size: 0.8em;
 }
+
 table.dataTable thead > tr > th.dt-orderable-asc, table.dataTable thead > tr > th.dt-orderable-desc,
 table.dataTable thead > tr > td.dt-orderable-asc,
 table.dataTable thead > tr > td.dt-orderable-desc {
   cursor: pointer;
 }
+
 table.dataTable thead > tr > th.dt-orderable-asc:hover, table.dataTable thead > tr > th.dt-orderable-desc:hover,
 table.dataTable thead > tr > td.dt-orderable-asc:hover,
 table.dataTable thead > tr > td.dt-orderable-desc:hover {
   outline: 2px solid rgba(0, 0, 0, 0.05);
   outline-offset: -2px;
 }
+
 table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order:after,
 table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order:before,
 table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order:after {
   opacity: 0.6;
 }
+
 table.dataTable thead > tr > th.dt-orderable-none:not(.dt-ordering-asc, .dt-ordering-desc) span.dt-column-order:empty, table.dataTable thead > tr > th.sorting_desc_disabled span.dt-column-order:after, table.dataTable thead > tr > th.sorting_asc_disabled span.dt-column-order:before,
 table.dataTable thead > tr > td.dt-orderable-none:not(.dt-ordering-asc, .dt-ordering-desc) span.dt-column-order:empty,
 table.dataTable thead > tr > td.sorting_desc_disabled span.dt-column-order:after,
 table.dataTable thead > tr > td.sorting_asc_disabled span.dt-column-order:before {
   display: none;
 }
+
 table.dataTable thead > tr > th:active,
 table.dataTable thead > tr > td:active {
   outline: none;
@@ -699,6 +637,7 @@ table.dataTable tfoot > tr > td div.dt-column-footer {
   align-items: var(--dt-header-align-items);
   gap: 4px;
 }
+
 table.dataTable thead > tr > th div.dt-column-header span.dt-column-title,
 table.dataTable thead > tr > th div.dt-column-footer span.dt-column-title,
 table.dataTable thead > tr > td div.dt-column-header span.dt-column-title,
@@ -709,6 +648,7 @@ table.dataTable tfoot > tr > td div.dt-column-header span.dt-column-title,
 table.dataTable tfoot > tr > td div.dt-column-footer span.dt-column-title {
   flex-grow: 1;
 }
+
 table.dataTable thead > tr > th div.dt-column-header span.dt-column-title:empty,
 table.dataTable thead > tr > th div.dt-column-footer span.dt-column-title:empty,
 table.dataTable thead > tr > td div.dt-column-header span.dt-column-title:empty,
