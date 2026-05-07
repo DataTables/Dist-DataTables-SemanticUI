@@ -1,52 +1,45 @@
-/*! DataTables Bootstrap 3 integration
+/*! DataTables Bootstrap 3 integration 3.0.0-beta.2
  * © SpryMedia Ltd - datatables.net/license
  */
 
-(function( factory ){
-	if ( typeof define === 'function' && define.amd ) {
+(function(factory){
+	if (typeof define === 'function' && define.amd) {
 		// AMD
-		define( ['jquery', 'datatables.net'], function ( $ ) {
-			return factory( $, window, document );
-		} );
+		define(['datatables.net'], function (dt) {
+			return factory(window, document, dt);
+		});
 	}
-	else if ( typeof exports === 'object' ) {
+	else if (typeof exports === 'object') {
 		// CommonJS
-		var jq = require('jquery');
-		var cjsRequires = function (root, $) {
-			if ( ! $.fn.dataTable ) {
-				require('datatables.net')(root, $);
+		var cjsRequires = function (root) {
+			if (! root.DataTable) {
+				require('datatables.net')(root);
 			}
 		};
 
 		if (typeof window === 'undefined') {
-			module.exports = function (root, $) {
-				if ( ! root ) {
+			module.exports = function (root) {
+				if (! root) {
 					// CommonJS environments without a window global must pass a
 					// root. This will give an error otherwise
 					root = window;
 				}
 
-				if ( ! $ ) {
-					$ = jq( root );
-				}
-
-				cjsRequires( root, $ );
-				return factory( $, root, root.document );
+				cjsRequires(root);
+				return factory(root, root.document, root.DataTable);
 			};
 		}
 		else {
-			cjsRequires( window, jq );
-			module.exports = factory( jq, window, window.document );
+			cjsRequires(window);
+			module.exports = factory(window, window.document, window.DataTable);
 		}
 	}
 	else {
 		// Browser
-		factory( jQuery, window, document );
+		factory(window, document, window.DataTable);
 	}
-}(function( $, window, document ) {
+}(function(window, document, DataTable) {
 'use strict';
-var DataTable = $.fn.dataTable;
-
 
 
 /**
@@ -56,73 +49,74 @@ var DataTable = $.fn.dataTable;
  * controls using Bootstrap. See https://datatables.net/manual/styling/bootstrap
  * for further information.
  */
-
 /* Set the defaults for DataTables initialisation */
-$.extend( true, DataTable.defaults, {
-	renderer: 'semanticUI'
-} );
-
-
+DataTable.util.object.assignDeep(DataTable.defaults, {
+    renderer: 'semanticUI'
+});
 /* Default class modification */
-$.extend( true, DataTable.ext.classes, {
-	container: "dt-container dt-semanticUI",
-	search: {
-		input: "dt-search ui input"
-	},
-	processing: {
-		container: "dt-processing ui segment"
-	},
-	table: 'dataTable table unstackable'
-} );
-
-
+DataTable.util.object.assignDeep(DataTable.ext.classes, {
+    container: 'dt-container dt-semanticUI',
+    search: {
+        input: 'dt-search ui input'
+    },
+    processing: {
+        container: 'dt-processing ui segment'
+    },
+    table: 'dataTable table unstackable'
+});
 /* Fomantic paging button renderer */
 DataTable.ext.renderer.pagingButton.semanticUI = function (settings, buttonType, content, active, disabled) {
-	var btnClasses = ['dt-paging-button', 'item'];
-
-	if (active) {
-		btnClasses.push('active');
-	}
-
-	if (disabled) {
-		btnClasses.push('disabled')
-	}
-
-	var a = $('<'+(disabled ? 'div' : 'a')+'>', {
-		'href': disabled ? null : '#',
-		'class': 'page-link'
-	})
-		.addClass(btnClasses.join(' '))
-		.html(content);
-
-	return {
-		display: a,
-		clicker: a
-	};
+    var btnClasses = ['dt-paging-button', 'item'];
+    if (active) {
+        btnClasses.push('active');
+    }
+    if (disabled) {
+        btnClasses.push('disabled');
+    }
+    var a = DataTable.Dom
+        .c(disabled ? 'div' : 'a')
+        .attr('href', disabled ? null : '#')
+        .classAdd('page-link')
+        .classAdd(btnClasses.join(' '))
+        .html(content);
+    return {
+        display: a.get(0),
+        clicker: a.get(0)
+    };
 };
-
 DataTable.ext.renderer.pagingContainer.semanticUI = function (settings, buttonEls) {
-	return $('<div/>').addClass('ui unstackable pagination menu').append(buttonEls);
+    return DataTable.Dom
+        .c('div')
+        .classAdd('ui unstackable pagination menu')
+        .append(buttonEls)
+        .get(0);
 };
-
-
 // JavaScript enhancements on table initialisation
-$(document).on( 'init.dt', function (e, ctx) {
-	if ( e.namespace !== 'dt' ) {
-		return;
-	}
-
-	var api = new $.fn.dataTable.Api( ctx );
-
-	// Length menu drop down
-	if ( $.fn.dropdown ) {
-		$( 'div.dt-length select', api.table().container() ).dropdown();
-	}
-
-	// Filtering input
-	$( 'div.dt-search.ui.input', api.table().container() ).removeClass('input').addClass('form');
-	$( 'div.dt-search input', api.table().container() ).wrap( '<span class="ui input" />' );
-} );
+DataTable.Dom.s(document).on('init.dt', function (e, ctx) {
+    if (e.namespace !== 'dt') {
+        return;
+    }
+    let api = new DataTable.Api(ctx);
+    let jq = DataTable.use('jq');
+    // Length menu drop down
+    if (jq.fn.dropdown) {
+        jq('div.dt-length select', api.table().container()).dropdown();
+    }
+    // Filtering input
+    DataTable.Dom
+        .s(api.table().container())
+        .find('div.dt-search.ui.input')
+        .classRemove('input')
+        .classAdd('form');
+    DataTable.Dom
+        .s(api.table().container())
+        .find('div.dt-search input')
+        .each(el => {
+        let wrapper = DataTable.Dom.c('span').classAdd('ui input');
+        el.replaceWith(wrapper.get(0));
+        wrapper.append(el);
+    });
+});
 
 
 return DataTable;
