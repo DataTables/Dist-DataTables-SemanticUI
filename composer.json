@@ -1,6 +1,6 @@
 {
     "name": "datatables.net/datatables.net-se",
-    "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table. This is DataTables with styling for [SemanticUI](https://semantic-ui.com/)",
+    "description": "DataTables with styling for [SemanticUI](https://semantic-ui.com/)",
     "support": {
         "forum": "https://datatables.net/forums",
         "source": "https://github.com/DataTables/Dist-DataTables-SemanticUI"
@@ -26,7 +26,6 @@
         "table"
     ],
     "require": {
-        "datatables.net/datatables.net": ">=1.12.1",
-        "semantic/ui": "2.*"
+        "datatables.net/datatables.net": "3.0.2"
     }
 }
