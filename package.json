@@ -1,16 +1,15 @@
 {
     "name": "datatables.net-se",
     "description": "DataTables with styling for [SemanticUI](https://semantic-ui.com/)",
-    "main": "js/dataTables.semanticui.js",
-    "module": "js/dataTables.semanticui.mjs",
-    "style": "css/dataTables.semanticui.css",
+    "main": "./js/dataTables.semanticui.js",
+    "module": "./js/dataTables.semanticui.mjs",
+    "style": "./css/dataTables.semanticui.css",
     "types": "./types/dataTables.semanticui.d.ts",
     "version": "3.0.4",
     "files": [
-        "css/**/*.css",
-        "js/**/*.js",
-        "js/**/*.mjs",
-        "types/**/*.d.ts"
+        "js",
+        "css",
+        "types"
     ],
     "keywords": [
         "Semantic",
@@ -34,5 +33,24 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/DataTables/DataTablesSrc.git"
-    }
+    },
+    "exports": {
+        ".": {
+            "types": "./types/dataTables.semanticui.d.ts",
+            "import": "./js/dataTables.semanticui.mjs",
+            "default": "./js/dataTables.semanticui.mjs",
+            "require": "./js/dataTables.semanticui.js"
+        },
+        "./js/*": "./js/*",
+        "./css": {
+            "types": "./types/css.d.ts",
+            "default": "./css/dataTables.semanticui.css"
+        },
+        "./css/*": {
+            "types": "./types/css.d.ts",
+            "default": "./css/*"
+        },
+        "./package.json": "./package.json"
+    },
+    "sideEffects": true
 }
