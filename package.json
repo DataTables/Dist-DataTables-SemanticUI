@@ -37,9 +37,10 @@
     "exports": {
         ".": {
             "types": "./types/dataTables.semanticui.d.ts",
+            "style": "./css/dataTables.semanticui.css",
             "import": "./js/dataTables.semanticui.mjs",
-            "default": "./js/dataTables.semanticui.mjs",
-            "require": "./js/dataTables.semanticui.js"
+            "require": "./js/dataTables.semanticui.js",
+            "default": "./js/dataTables.semanticui.mjs"
         },
         "./js/*": "./js/*",
         "./css": {
